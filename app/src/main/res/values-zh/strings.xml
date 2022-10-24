@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">掌上校园</string>
+
+    <!-- Home -->
+    <string name="home_subtitle">愿你对自己忠诚</string>
+    <string name="home_card_checkin">健康打卡</string>
+    <string name="home_card_results">成绩查询</string>
+    <string name="home_list_config">配置</string>
+    <string name="home_checkin_true">已打卡</string>
+    <string name="home_checkin_false">未打卡</string>
+
+    <!--  Config  -->
+    <string name="config_account">学号</string>
+    <string name="config_password">教务系统密码</string>
+    <string name="config_save_config">已保存配置</string>
+    <string name="config_idcard">身份证号</string>
+    <string name="config_idend">身份证后6位</string>
+    <string name="config_dqjkzk">当前健康状况</string>
+    <string name="config_dqszs">当前省</string>
+    <string name="config_dqszc">当前市</string>
+    <string name="config_dqszq">当前区</string>
+    <string name="config_sfyjzym">是否以接种疫苗</string>
+    <string name="config_sfjzzy">是否有就诊住院</string>
+    <string name="config_sfjcys">是否有过接触</string>
+    <string name="config_swtw">上午体温(正常)</string>
+    <string name="config_zwtw">中午体温(正常)</string>
+    <string name="config_xwtw">下午体温(正常)</string>
+
+    <!--  Results  -->
+    <string name="results_dialog_yzm">验证码</string>
+    <string name="results_title">成绩</string>
+    <string name="results_dialog_title">请输入验证码</string>
+    <string name="results_dialog_button">登录</string>
+    <string name="results_config_null">请先配置信息</string>
+    <string name="results_bottom_grades">成绩</string>
+    <string name="results_bottom_rank">排名</string>
+</resources>
