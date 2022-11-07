@@ -66,8 +66,6 @@ class ConfigViewModel : ViewModel(){
             swtw.value = DataManager.readData("swtw", "")
             zwtw.value = DataManager.readData("zwtw", "")
             xwtw.value = DataManager.readData("xwtw", "")
-
-
         }
     }
 }

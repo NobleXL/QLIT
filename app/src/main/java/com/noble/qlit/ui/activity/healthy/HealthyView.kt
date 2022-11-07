@@ -12,8 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -22,20 +21,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
-import com.google.accompanist.web.WebView
-import com.google.accompanist.web.rememberWebViewState
 import com.noble.qlit.R
 import com.noble.qlit.data.remote.EasyOkhttp
-import com.noble.qlit.data.repository.RemoteRepository
 import com.noble.qlit.ui.activity.base.InitView
-import com.noble.qlit.ui.components.GradesScreen
-import com.noble.qlit.ui.components.MaterialTopAppBar
-import com.noble.qlit.ui.components.MyScaffold
 import com.noble.qlit.ui.theme.fontHead
 import com.noble.qlit.utils.ActivityCollector
+import com.noble.qlit.utils.DataManager
+import com.noble.qlit.utils.getDate
+import kotlinx.coroutines.launch
 
 /**
  * @author: NobleXL
@@ -45,6 +38,7 @@ import com.noble.qlit.utils.ActivityCollector
 fun HealthyView() {
 
     val model: HealthyViewModel = viewModel()
+    DataSettings()
     if (!model.isLogin) {
         InitView {
             LoginDialog()
@@ -141,3 +135,14 @@ fun CaptchaPic() {
     )
 }
 
+// 健康按钮变颜色通过时间差异做对比
+@Composable
+fun DataSettings() {
+    LaunchedEffect(key1 = Unit) {
+        var data by mutableStateOf("")
+        data = getDate()
+        launch {
+            DataManager.saveData("data", data)
+        }
+    }
+}

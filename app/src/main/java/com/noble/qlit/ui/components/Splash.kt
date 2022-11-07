@@ -9,8 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -18,8 +17,10 @@ import androidx.compose.ui.unit.dp
 import com.noble.qlit.R
 import com.noble.qlit.ui.activity.base.InitView
 import com.noble.qlit.ui.theme.canvas
+import com.noble.qlit.utils.DataManager
 import com.noble.qlit.utils.getDate
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 /**
  * @author: noble
@@ -27,6 +28,7 @@ import kotlinx.coroutines.delay
  */
 @Composable
 fun SplashScreen(onSplashCompleted: () -> Unit) {
+
     InitView {
         Surface(
             modifier = Modifier
@@ -67,5 +69,4 @@ fun SplashScreen(onSplashCompleted: () -> Unit) {
         }
     }
 }
-
 

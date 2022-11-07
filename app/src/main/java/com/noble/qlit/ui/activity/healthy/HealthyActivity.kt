@@ -1,11 +1,12 @@
 package com.noble.qlit.ui.activity.healthy
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.lifecycle.ViewModelProvider
 import com.noble.qlit.ui.activity.base.BaseActivity
 import com.noble.qlit.utils.ActivityCollector
+import com.noble.qlit.utils.DataManager
+import okhttp3.Cookie
 
 /**
  * @author: NobleXL

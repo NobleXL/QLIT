@@ -12,7 +12,6 @@ import com.noble.qlit.ui.components.SplashScreen
  * @desc: HomeActivity
  */
 class HomeActivity : BaseActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

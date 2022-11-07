@@ -5,6 +5,7 @@
     <string name="home_subtitle">May you be faithful to yourself</string>
     <string name="home_card_checkin">Healthy Report</string>
     <string name="home_card_results">Grades Inquiry</string>
+    <string name="home_healthy_login">健康登录</string>
     <string name="home_list_config">Config</string>
     <string name="home_checkin_true">Already clocked in</string>
     <string name="home_checkin_false">Not clocked in</string>

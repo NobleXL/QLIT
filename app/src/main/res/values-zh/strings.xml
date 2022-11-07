@@ -6,6 +6,7 @@
     <string name="home_subtitle">愿你对自己忠诚</string>
     <string name="home_card_checkin">健康打卡</string>
     <string name="home_card_results">成绩查询</string>
+    <string name="home_healthy_login">健康登录</string>
     <string name="home_list_config">配置</string>
     <string name="home_checkin_true">已打卡</string>
     <string name="home_checkin_false">未打卡</string>
