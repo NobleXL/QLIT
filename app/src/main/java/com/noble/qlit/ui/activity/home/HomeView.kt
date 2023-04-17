@@ -1,6 +1,5 @@
 package com.noble.qlit.ui.activity.home
 
-import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -9,25 +8,19 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Bookmarks
 import androidx.compose.material.icons.outlined.Extension
 import androidx.compose.material.icons.rounded.ManageSearch
-import androidx.compose.material.icons.rounded.Person
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.navigation.ActivityNavigator
 import com.noble.qlit.R
 import com.noble.qlit.data.repository.RemoteRepository
 import com.noble.qlit.ui.activity.base.InitView
 import com.noble.qlit.ui.activity.config.ConfigActivity
 import com.noble.qlit.ui.activity.healthy.HealthyActivity
-import com.noble.qlit.ui.activity.healthy.HealthyViewModel
 import com.noble.qlit.ui.activity.results.ResultsActivity
 import com.noble.qlit.ui.components.*
 import com.noble.qlit.ui.theme.Teal200
@@ -37,7 +30,7 @@ import com.noble.qlit.utils.start
 import kotlinx.coroutines.launch
 
 /**
- * @author: noble
+ * @author: NobleXL
  * @desc: HomeView
  */
 @Composable
@@ -147,5 +140,6 @@ fun HomeAppBar() {
         }
     )
 }
+
 
 

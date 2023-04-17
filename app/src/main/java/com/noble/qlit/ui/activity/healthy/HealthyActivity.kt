@@ -5,14 +5,12 @@ import androidx.activity.compose.setContent
 import androidx.lifecycle.ViewModelProvider
 import com.noble.qlit.ui.activity.base.BaseActivity
 import com.noble.qlit.utils.ActivityCollector
-import com.noble.qlit.utils.DataManager
-import okhttp3.Cookie
 
 /**
  * @author: NobleXL
  * @desc: HealthyActivity 界面
  */
-class  HealthyActivity: BaseActivity() {
+class HealthyActivity: BaseActivity() {
 
     lateinit var viewModel: HealthyViewModel
 
