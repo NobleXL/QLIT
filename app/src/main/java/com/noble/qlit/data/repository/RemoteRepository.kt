@@ -197,14 +197,14 @@ object RemoteRepository {
         }
         return FormBody.Builder()
             .add("operateType", "D=C")
-            .add("ID", array[1])
-            .add("today", array[2])
-            .add("P=MH_STUHEALTHREPORT=RQ=S=WD", array[3])
-            .add("P=MH_STUHEALTHREPORT=STUID=S=WD", array[4])
-            .add("P=MH_STUHEALTHREPORT=ID=S=P", array[5])
-            .add("P=MH_STUHEALTHREPORT=STUID=S=C", array[6])
-            .add("P=MH_STUHEALTHREPORT=RQ=S=C", array[7])
-            .add("P=MH_STUHEALTHREPORT=CREATETIME=S=C", array[8])
+            .add("ID", array[1]!!)
+            .add("today", array[2]!!)
+            .add("P=MH_STUHEALTHREPORT=RQ=S=WD", array[3]!!)
+            .add("P=MH_STUHEALTHREPORT=STUID=S=WD", array[4]!!)
+            .add("P=MH_STUHEALTHREPORT=ID=S=P", array[5]!!)
+            .add("P=MH_STUHEALTHREPORT=STUID=S=C", array[6]!!)
+            .add("P=MH_STUHEALTHREPORT=RQ=S=C", array[7]!!)
+            .add("P=MH_STUHEALTHREPORT=CREATETIME=S=C", array[8]!!)
             .add("P=MH_STUHEALTHREPORT=WXDWSHENG=S=C", "")
             .add("P=MH_STUHEALTHREPORT=WXDWSHI=S=C", "")
             .add("P=MH_STUHEALTHREPORT=WXDWQU=S=C", "")
@@ -232,8 +232,8 @@ object RemoteRepository {
         try {
             val response = EasyOkhttp.okHttpClient.newCall(request).execute()
             if (!response.isSuccessful) response.close()
-            if (response.body() != null) {
-                val `is`: InputStream? = response.body()!!.byteStream()
+            if (response.body != null) {
+                val `is`: InputStream? = response.body!!.byteStream()
                 LogUtil.d(TAG, "==> 成功获取验证码")
                 return BitmapFactory.decodeStream(`is`)
             }

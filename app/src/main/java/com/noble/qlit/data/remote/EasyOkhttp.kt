@@ -50,8 +50,8 @@ object EasyOkhttp {
                 }
 
                 override fun onResponse(call: Call, response: Response) {
-                    val resBody = response.body()?.string()
-                    Log.d("HTTP", "onResponse: ${response.code()}")
+                    val resBody = response.body?.string()
+                    Log.d("HTTP", "onResponse: ${response.code}")
                     if (resBody != null) {
                         it.resume(resBody.toString())
                     } else {
@@ -66,13 +66,13 @@ object EasyOkhttp {
     class SessionCookieJar : CookieJar {
         private val cookieStore: HashMap<String, List<Cookie>> = HashMap()
         override fun saveFromResponse(url: HttpUrl, cookies: List<Cookie>) {
-            cookieStore[url.host()] = cookies
+            cookieStore[url.host] = cookies
             // 获取cookie值
             cookie = cookies.toString().substringAfter("[").substringBefore("]")
         }
 
         override fun loadForRequest(url: HttpUrl): List<Cookie> {
-            val cookies = cookieStore[url.host()]
+            val cookies = cookieStore[url.host]
             return cookies ?: ArrayList()
         }
     }

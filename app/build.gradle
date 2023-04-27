@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.noble.qlit"
-        minSdk 23
-        targetSdk 32
+        minSdk 26
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -72,20 +72,44 @@ dependencies {
     def accompanist_version = "0.24.3-alpha"
     implementation "com.google.accompanist:accompanist-systemuicontroller:$accompanist_version"
     implementation "com.google.accompanist:accompanist-navigation-material:$accompanist_version"
+    implementation "com.google.accompanist:accompanist-navigation-animation:$accompanist_version"
     implementation "com.google.accompanist:accompanist-insets:$accompanist_version"
     implementation "com.google.accompanist:accompanist-insets-ui:$accompanist_version"
     implementation "com.google.accompanist:accompanist-pager:$accompanist_version"
     implementation "com.google.accompanist:accompanist-pager-indicators:$accompanist_version"
     implementation "com.google.accompanist:accompanist-webview:$accompanist_version"
+    implementation "com.google.accompanist:accompanist-swiperefresh:$accompanist_version"
+    implementation "com.google.accompanist:accompanist-placeholder-material:$accompanist_version"
 
     // Retrofit
     def retrofit_version = "2.9.0"
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    // moshi
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+
+    def moshi_version = "1.13.0"
+    implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
 
     // Jsoup
     implementation "org.jsoup:jsoup:1.13.1"
 
     // Third Party
     implementation 'com.github.GrenderG:Toasty:1.5.2'
+
+    //图片加载
+    implementation("io.coil-kt:coil-compose:2.0.0-rc01")
+
+    implementation "androidx.constraintlayout:constraintlayout-compose:1.0.1"
+
+    // aws-android-sdk
+    implementation 'com.amazonaws:aws-android-sdk-s3:2.52.1'
+    implementation 'com.amazonaws:aws-android-sdk-mobile-client:2.52.1'
+
+    // RxJava
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+
+    // Logger API
+    implementation 'com.jakewharton.timber:timber:4.7.0'
 }

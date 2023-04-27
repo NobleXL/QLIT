@@ -212,7 +212,6 @@ fun HealthyFrame() {
                     onClick = {
                         currentNavigationIndex = index
                     },
-                    //直接考试结果页面，进入查看页面，返回直接回到列表？
                     icon = {
                         Icon(
                             imageVector = navigationItem.icon,
